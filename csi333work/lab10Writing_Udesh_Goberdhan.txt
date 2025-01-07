@@ -1,0 +1,8 @@
+For the different variations of the program, the one with the best performance was Test 3, which had the shortest runtime of approximately 0.017 seconds. Test 1 followed, with runtimes in the range of 0.020 to 0.030 seconds, while Test 2 was significantly slower but much more accurate than test 1.
+
+The primary issue with Test 1 was the occurrence of a race condition. Since no synchronization was used, threads occasionally overwrote each other’s updates to the global variable, leading to incorrect results. This caused the final sum to be lower than the actual value.
+
+Test 2, while accurate, was much slower because the global variable was protected by a lock, using a semaphore. Every update required acquiring and releasing the lock, which added significant overhead due to the high number of iterations.
+
+Test 3 had the best performance because it combined accuracy with efficiency. Each thread computed its own local sum without locking, minimizing contention. The global variable was updated only once per thread, within a locked section. This approach reduced the frequency of locking and unlocking, improving the runtime while maintaining correctness.
+

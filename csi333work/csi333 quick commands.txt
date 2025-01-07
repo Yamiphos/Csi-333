@@ -1,0 +1,14 @@
+cd /mnt/c/users/udesh/CSI-333
+cd /mnt/c/users/udesh/CSI-333/wwf4
+
+USELESSl:+++
+C:\Users\Udesh\CSI-333\
+C:\Users\Udesh\CSI-333\WWf4\
+
+gcc XXXXXXXXX.c -o XXXXXXXX
+
+./XXXXXXXX
+
+valgrind --leak-check=full ./XXXXXXX
+
+GET /webservertest.html HTTP/1.1
