@@ -1,2 +1,1 @@
-# Csi-333
-For csi333 at Ualbany
+For University at Albany ICSI 333.
